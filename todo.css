@@ -2,3 +2,36 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 #main-Heading{text-align: center;}
+
+.grid-cont{
+   
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+#todo-input, #todo-date{
+    font-size: 15px;
+    padding: 8px 4px;
+}
+
+.b1{
+    background-color:green;
+    color: aliceblue;
+    padding: 15px 0px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.b2{
+    background-color: rgb(73, 12, 12);
+    color: aliceblue;
+    padding: 15px 0px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

@@ -1,8 +1,8 @@
 let e = localStorage.getItem("todolist");
 let todoList = JSON.parse(e)||[];
 displayIteam();
-console.log(e);
-function addTodo(){
+
+let addTodo = () =>{
     let inputElement = document.querySelector('#todo-input');
     let dateElement = document.querySelector('#todo-date');
     let dateItem = dateElement.value;
@@ -11,11 +11,12 @@ function addTodo(){
     inputElement.value = '';
     dateElement.value = '';
     displayIteam();
-    localStorage.setItem("todolist", JSON.stringify(todoList));
-   
-}
+    };
 
-function displayIteam(){
+    let addElement = document.querySelector('.b1');
+    addElement.addEventListener('click',addTodo);
+
+ function displayIteam(){
     let displayElement = document.querySelector('.display-cont');
    
     let newHtml = '';
@@ -26,10 +27,8 @@ function displayIteam(){
        
        <span>${item}</span>
        <span>${date}</span>
-       <button class = "b2" onclick ="todoList.splice(${i},1);displayIteam();">Delete</button>
-      
-       `;
+       <button id="b2"onclick="todoList.splice(${i},1);displayIteam();">Delete</button>`;  
     }
     displayElement.innerHTML = newHtml;
-   
+    localStorage.setItem("todolist", JSON.stringify(todoList));
 }

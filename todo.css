@@ -1,6 +1,10 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    
 }
+
+
+
 #main-Heading{text-align: center;}
 
 .grid-cont{
@@ -27,7 +31,7 @@ body{
     cursor: pointer;
 }
 
-.b2{
+#b2{
     background-color: rgb(73, 12, 12);
     color: aliceblue;
     padding: 15px 0px;

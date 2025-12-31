@@ -1,22 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App</title>
-    <link rel="stylesheet" href="todo.css">
-</head>
-<body>
-    <h1 id="main-Heading">Todo List</h1>
-    
-    <div class="grid-cont">
-   <input type="text" placeholder="Enter Todo" id="todo-input">
-   <input type="date" id="todo-date">
-   <button class="b1">Add</button>
-    </div>
-    <div class="display-cont grid-cont"></div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-app">
+        <h1>To-Do List</h1>
 
-    
-     <script src="todo.js"></script>
-</body>
+        <div class="stat-container">
+          <div class="details">
+            <h3>Keep it Up!</h3>
+            <div id="progressbar">
+              <div id="progress"></div>
+            </div>
+          </div>
+          <div class="stats-number">
+            <p id="numbers">0 / 0</p>
+          </div>
+
+        </div>
+          <form class="input-area">
+            <input
+              type="text"
+              id="task-input"
+              placeholder="Add a new task...."
+            />
+            <button type="submit" id="add-task-btn">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </form>
+
+          <div class="todos-container">
+             <img
+                class="empty-image"
+                src="Lovepik_com-450127955-Modern flat illustration of task list.png"
+                alt="empty"
+              />
+            <ul id="task-list">
+            </ul>
+          </div>
+      </div>
+    </div>
+
+    <script src="todo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  </body>
 </html>
